@@ -1,0 +1,53 @@
+HELLO!!! I'm Ryan Whitford and I'm an undergraduate physics student at UCLA. 
+
+I've made some demonstrations of various fundamental systems that I am excited to share!
+The equations that govern even simple quantum systems often times carry great complexity.
+Consequentially, it is important for physicists to understand how to use numerical methods
+to solve these equations, as well as understanding how to visualize and interpret results.
+
+Please enjoy!
+
+
+DESCRIPTIONS:
+
+INFINITE WELL POTENTIAL:
+The infinite well potential is often the first potential students solve the (time-independent) 
+Schrödinger equation with due to the simplicity of the solution. Students can find the resulting 
+graphs helpful to compare solutions of different energies and play around with the parameters. 
+It is an important example for those to familiarize themselves with the statistical 
+interpretation of the wave function.
+
+HARMONIC OSCILLATOR POTENTIAL:
+The harmonic oscillator potential is extremely fundamental to the study of quantum mechanics
+because it can be used to approximate (as a Taylor approximation) other much more complex
+potentials(and physicists love their approximations!). The solution isn't so simple, so here
+I introduce a method to solve it numerically by approximating the wavefunction to live in a
+discrete function space (see link below). When doing this, the Hamiltonian operator can be represented as an
+N-dimensional matrix (where N is finite, and preferably large) and solve the eigenvalue problem
+for the matrix. This gives shocking accuracy, and I compare the numerical solution to the
+analytical solution which can be found from the long and tedious process of the power series
+method. 
+If you're curious on the math that I used, I found this thread to give a helpful explanation:
+https://physics.stackexchange.com/questions/170546/numerical-solution-to-schr%C3%B6dinger-equation-eigenvalues
+
+HYDROGEN ATOM:
+Moving onto solving the three dimensional Schrödinger equation, the hydrogen atom is a fundamental
+(and super important!!!) example. Similar to my quantum harmonic oscillator demo, I employ numerical
+methods to solve the radial equation and compare with the analytic solution. To visualize the three
+dimensional wave function is much more involved than the 1D cases. I show two different ways to visualize
+the resulting orbitals that the electron lives in. The first is a 3D plot that shows the region the 
+electron is likely to live in (with a slice cut out to see the inside). The second plot is a 2D heatmap
+of the orbital. The reason a 2D heatmap can be used to visualize a function of 3 variables is because 
+there is a symmetry about the z-axis, so it turns out the probability density is only dependent on 
+2 variables. The latter method is superior computationally and interpretively in most cases.
+
+DOUBLE PENDULUM:
+The double pendulum is great demonstration of how simple looking systems can act chaotic. Tiny differences
+in initial conditions yield vastly different results. In my demo you can input different initial conditions
+and it will trace the trajectory of each pendulum. The trajectory is solved mathematically using Lagrangian 
+Mechanics which results in a system of 4 differential equations that describe the motion. Scipy has great
+libraries that allow us to solve these types of equations with given initial conditions. 
+If you have never seen an animation of the double pendulum or want a refresher I recommend watching this 
+video beforehand to better understand what I am modeling:
+https://www.youtube.com/watch?v=BLsQexP_UYE
+
